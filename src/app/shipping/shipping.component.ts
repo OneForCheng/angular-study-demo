@@ -1,4 +1,4 @@
-import { Component, forwardRef, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -10,7 +10,7 @@ export class ShippingComponent implements OnInit {
   shippingCosts;
 
   constructor(
-    @Inject(forwardRef(() => CartService)) private cartService: CartService
+    @Inject(CartService) private cartService: CartService
   ) { }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-import { Component, forwardRef, Inject, Injectable, OnInit } from '@angular/core';
+import { Component, Inject, Injectable, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { products } from '../products';
 import { CartService } from '../cart.service';
@@ -12,8 +12,8 @@ import { CartService } from '../cart.service';
 export class ProductDetailsComponent implements OnInit {
   product;
 
-  constructor(@Inject(forwardRef(() => ActivatedRoute)) private route: ActivatedRoute,
-              @Inject(forwardRef(() => CartService)) private cartService: CartService) {}
+  constructor(@Inject(ActivatedRoute) private route: ActivatedRoute,
+              @Inject(CartService) private cartService: CartService) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {

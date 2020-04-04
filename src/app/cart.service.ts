@@ -1,4 +1,4 @@
-import { forwardRef, Inject, Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,7 +8,7 @@ export class CartService {
   items = [];
 
   constructor(
-    @Inject(forwardRef(() => HttpClient)) private http: HttpClient
+    @Inject(HttpClient) private http: HttpClient
   ) {}
 
   addToCart(product) {
