@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -7,9 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class CartService {
   items = [];
 
-  constructor(
-    @Inject(HttpClient) private http: HttpClient
-  ) {}
+  constructor(private http: HttpClient) {}
 
   addToCart(product) {
     this.items.push(product);
