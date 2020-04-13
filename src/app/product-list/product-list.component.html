@@ -3,11 +3,11 @@
 
 <div *ngFor="let product of products; index as productId">
   <h3>
-    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]" appHighlight defaultColor="violet">
       {{ product.name }}
     </a>
   </h3>
-  <p *ngIf="product.description" appHighlight>
+  <p *ngIf="product.description" appHighlight="yellow">
     Description: {{ product.description }}
   </p>
 
