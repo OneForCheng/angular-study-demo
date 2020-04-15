@@ -9,6 +9,7 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = products;
+  condition = false
 
   share() {
     window.alert('The product has been shared!');

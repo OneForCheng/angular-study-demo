@@ -1,5 +1,10 @@
 <h2>Products</h2>
 
+<button (click)="condition = !condition">
+  Toggle condition to {{condition}}
+</button>
+
+<p *appUnless="condition">Show this sentence unless the condition is false.</p>
 
 <div *ngFor="let product of products; index as productId">
   <h3>
