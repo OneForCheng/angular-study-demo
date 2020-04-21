@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { HighlightDirective } from './directive/highlight.directive';
 import { UnlessDirective } from './directive/unless.directive';
+import { ExponentialStrengthPipe } from './pipe/exponential-strength.pipe';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { UnlessDirective } from './directive/unless.directive';
     ShippingComponent,
     HighlightDirective,
     UnlessDirective,
+    ExponentialStrengthPipe,
   ],
   bootstrap: [ AppComponent ],
 })

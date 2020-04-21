@@ -4,6 +4,8 @@
   Toggle condition to {{condition}}
 </button>
 
+<p>Super power boost: {{2 | exponentialStrength: 10}}</p>
+
 <p *appUnless="condition">Show this sentence unless the condition is false.</p>
 
 <div *ngFor="let product of products; index as productId">
